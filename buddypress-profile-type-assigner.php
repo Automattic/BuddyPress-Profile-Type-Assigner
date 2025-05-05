@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       BuddyPress Profile Type Assigner
  * Description:       Automatically assigns BuddyPress profile types to new users based on their email domain.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 6.6
  * Requires PHP:      8.2
  * Author:            WordPress VIP
