@@ -124,7 +124,7 @@ function assign_profile_type( $user_id ) {
 
 	// Set the WordPress role if configured.
 	if ( isset( $member_type_roles[0] ) && 'none' !== $member_type_roles[0] ) {
-		$user      = new WP_User( $user_id );
+		$user      = new \WP_User( $user_id );
 		$old_roles = $user->roles;
 		$new_role  = $member_type_roles[0];
 		
@@ -145,7 +145,7 @@ function assign_profile_type( $user_id ) {
 		$user->add_role( $new_role );
 		
 		// Verify the role was set.
-		$user          = new WP_User( $user_id ); // Refresh user object.
+		$user          = new \WP_User( $user_id ); // Refresh user object.
 		$current_roles = $user->roles;
 		// error_log( 'buddypress_profile_type_assigner: Current roles after update: ' . print_r( $current_roles, true ) );
 		
