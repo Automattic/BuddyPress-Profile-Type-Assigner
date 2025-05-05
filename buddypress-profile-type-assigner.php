@@ -40,17 +40,17 @@ define(
 */
 
 // Hook into user activation.
-add_action( 'bp_core_activated_user', 'buddypress_profile_type_assigner', 1000 );
+add_action( 'bp_core_activated_user', __NAMESPACE__ . '\\assign_profile_type', 1000 );
 
 // Add a hook to run after activation is complete - without this, the pending user becomes a Subscriber again.
-add_action( 'bp_after_activation', 'buddypress_profile_type_assigner', 1000 );
+add_action( 'bp_after_activation', __NAMESPACE__ . '\\assign_profile_type', 1000 );
 
 /**
  * Assigns profile type based on email domain.
  *
  * @param int $user_id The user ID.
  */
-function buddypress_profile_type_assigner( $user_id ) {
+function assign_profile_type( $user_id ) {
 	
 	// Get user data.
 	$user = get_userdata( $user_id );
