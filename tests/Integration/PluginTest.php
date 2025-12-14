@@ -17,8 +17,7 @@ class PluginTest extends TestCase {
 	 */
 	public function test_plugin_loaded(): void {
 		$this->assertTrue(
-			function_exists( 'bp_profile_type_assigner_init' )
-			|| class_exists( 'BP_Profile_Type_Assigner' )
+			function_exists( 'Automattic\\BuddyPressProfileTypeAssigner\\assign_profile_type' )
 		);
 	}
 }
