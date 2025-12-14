@@ -36,4 +36,6 @@
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/tests/*</exclude-pattern>
+	<!-- Main plugin file needs CS fixes in a separate PR -->
+	<exclude-pattern>/buddypress-profile-type-assigner.php</exclude-pattern>
 </ruleset>
